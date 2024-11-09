@@ -1,0 +1,11 @@
+<h1>Mentoras</h1>
+
+<ul>
+  <% @mentoras.each do |mentora| %>
+    <li>
+      <%= link_to mentora.nome, mentora %>      
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Nova Mentora", new_mentora_path %>
