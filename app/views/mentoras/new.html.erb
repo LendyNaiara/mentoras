@@ -1,0 +1,36 @@
+<h1>Nova Mentora</h1>
+
+<%= form_with model: @mentora do |form| %>
+  <div>
+    <%= form.label :nome %><br>
+    <%= form.text_field :nome %>
+    <% @mentora.errors.full_messages_for(:nome).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
+    <% @mentora.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :contato %><br>
+    <%= form.text_field :contato %>
+  </div>
+
+  <div>
+    <%= form.label :habilidades %><br>
+    <%= form.textarea :habilidades %>
+    <% @mentora.errors.full_messages_for(:habilidades).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
